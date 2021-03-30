@@ -1,11 +1,48 @@
 body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #61A7BD;
+  display: flex;
+  flex-direction: row;
+  background-color: #54afca;
+  padding: 3vw 1vw;
+  font-family: "PT Sans";
+}
+
+section#title-card {
+  width: 40%;
+}
+
+section#projects {
+  width: 60%;
+  padding: 0 2.0rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
-    background-color: white;
-    border-radius: 50px;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: -17px 11px 9px rgba(0, 0, 0, 0.25);
+}
+
+.card#title {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px 15px;
+}
+
+.card#small-card {
+  display: flex;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 2rem;
+}
+
+h1.name {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4.8rem;
+}
+
+.card#title p {
+  font-size: 2rem;
 }
