@@ -2,17 +2,18 @@ body {
   display: flex;
   flex-direction: row;
   background-color: #54afca;
-  padding: 3vw 1vw;
-  font-family: "PT Sans";
+  padding: 2vw 1vw;
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
 }
 
 section#title-card {
-  width: 40%;
+  width: 45%;
 }
 
 section#projects {
-  width: 60%;
-  padding: 0 2.0rem;
+  width: 55%;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -27,22 +28,36 @@ section#projects {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px 15px;
+  padding: 3rem 1.5rem 1rem 1.2rem;
+}
+
+h1.name {
+  margin: 0;
+  font-weight: 900;
+  font-size: 4.0rem;
+}
+
+.card#title p {
+  font-size: 2rem;
+  margin: 1rem 0 auto 0;
+}
+
+.title-card-footer {
+  font-size: 1.8rem;
+}
+
+.title-card-footer#links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.title-card-footer#links a{
+  padding: 0.5rem 2rem 0.5rem 0;
 }
 
 .card#small-card {
   display: flex;
   padding: 0.5rem 0.8rem;
   margin-bottom: 2rem;
-}
-
-h1.name {
-  margin: 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 4.8rem;
-}
-
-.card#title p {
-  font-size: 2rem;
 }
