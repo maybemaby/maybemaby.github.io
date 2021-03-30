@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #61A7BD;
+}
+
+.card {
+    background-color: white;
+    border-radius: 50px;
+}
