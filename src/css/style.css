@@ -16,7 +16,7 @@ body {
     align-items: stretch;
     height: 90%;
   }
-  section#projects {
+  section#showcase {
     margin-top: 0 2rem;
   }
   section#title-card {
@@ -27,7 +27,7 @@ section#title-card {
   width: 90%;
 }
 
-section#projects {
+section#showcase {
   width: 90%;
   padding: 2rem;
   display: flex;
@@ -103,4 +103,12 @@ nav.switch-button button{
   font-size: 16px;
   min-width: 8rem;
   
+}
+
+section#experience {
+  display: block;
+}
+
+section#projects {
+  display: none;
 }
