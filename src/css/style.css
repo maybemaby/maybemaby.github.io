@@ -36,8 +36,17 @@ section#showcase {
 
 .card {
   background-color: white;
-  border-radius: 1.5rem;
-  box-shadow: -5px 6px 9px rgba(0, 0, 0, 0.349);
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 9px 0 #00000059;
+  /* border: solid; */
+  /* border-width: 0 0.3rem 0.35rem 0; */
+  /* border-color: black; */
+  min-height: 40px;
+  transition: 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0 12px 18px 0 #00000059;
 }
 
 .card#title {
@@ -61,6 +70,7 @@ h1.name {
 
 .title-card-footer {
   font-size: 1.8rem;
+  margin-top: 0.75rem;;
 }
 
 .title-card-footer#links {
