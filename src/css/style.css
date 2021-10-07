@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #54afca;
-  padding: 2vw 1.2vw;
+  padding: 2vw 0vw;
   font-family: "PT Sans", sans-serif;
   font-weight: normal;
 }
@@ -15,6 +15,7 @@ body {
     justify-content: start;
     align-items: stretch;
     height: 90%;
+    padding: 2vw 1.2vw;
   }
   section#showcase {
     margin-top: 0 2rem;
@@ -22,6 +23,11 @@ body {
   section#title-card {
     margin-bottom: 3rem;
   }
+  nav.switch-button button {
+    padding: 0.4rem;
+    min-width: 8rem;  
+  }
+
 }
 section#title-card {
   width: 90%;
@@ -105,14 +111,13 @@ nav.switch-button button.active {
 }
 
 nav.switch-button button{
+  padding: 0.2rem;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
   border: 0;
-  padding: 0.4rem;
   color: rgb(0, 0, 0);
   font-size: 16px;
-  min-width: 8rem;
-  
+  min-width: 5.5rem;
 }
 
 section#experience {
