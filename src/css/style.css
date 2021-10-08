@@ -91,6 +91,7 @@ h1.name {
 
 .card#small-card {
   display: flex;
+  flex-direction: column;
   padding: 0.5rem 0.8rem;
   margin-bottom: 2rem;
 }
@@ -126,4 +127,42 @@ section#experience {
 
 section#projects {
   display: none;
+}
+
+section#skills {
+  display: none;
+  text-align: center;
+}
+
+section#skills p {
+  margin: 0.3rem 0;
+}
+
+section#skills h2 {
+  margin: 0.3rem 0;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: row;
+  max-height: auto;
+  height: auto;
+  justify-content: start;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+p.skill-type {
+  font-size: large;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+}
+
+.skill-container img {
+  margin: auto;
+  width: 48px;
+}
+
+div.skill-icons {
+  flex-wrap: wrap;
 }
