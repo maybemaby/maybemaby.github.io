@@ -41,7 +41,7 @@ section#title-card {
 }
 
 section#showcase {
-  width: 90%;
+  width: 100%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -163,13 +163,18 @@ p.skill-type {
   font-size: large;
   padding: 0.7rem 1.5rem;
   font-weight: 600;
+  width: 40%;
+  word-break: normal;
 }
 
 .skill-container img {
   margin: auto;
-  width: 48px;
+  width: 60px;
 }
 
 div.skill-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   flex-wrap: wrap;
 }
