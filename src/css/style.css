@@ -167,6 +167,10 @@ p.skill-type {
   word-break: normal;
 }
 
+p.summary {
+  padding: 0.25rem 0;
+}
+
 .skill-container img {
   margin: auto;
   width: 60px;
