@@ -28,14 +28,39 @@ body {
   }
   
   section#title-card {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
   }
+
+  section#projects {
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+
   nav.switch-button button {
     padding: 0.4rem;
-    min-width: 8rem;  
+    min-width: 8rem;
   }
 
 }
+
+@media (prefers-reduced-motion) {
+  div#nav-indicator {
+    transition: none;
+  }
+}
+div#nav-indicator {
+  position: absolute;
+  margin: 0 0.2rem;
+  left: 0%;
+  top: 0.2rem;
+  background-color: rgb(253, 156, 10);
+  height: 80%;
+  width: 33%;
+  border-radius: 15px;
+  z-index: 1;
+  transition: 0.3s ease;
+}
+
 section#title-card {
   width: 90%;
 }
@@ -110,22 +135,27 @@ nav.switch-button {
   margin-bottom: 2rem;
   align-self: center;
   box-shadow: -5px 6px 9px rgba(0, 0, 0, 0.349);
+  position: relative;
 }
 
 nav.switch-button button.active {
-  background-color: rgb(241, 169, 36);
-  color: white;
-  outline: none;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 203, 59, 0);
+  position: relative;
+  z-index: 100;
 }
 
 nav.switch-button button{
   padding: 0.2rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0);
   border-radius: 15px;
   border: 0;
   color: rgb(0, 0, 0);
   font-size: 16px;
   min-width: 5.5rem;
+  z-index: 100;
+  position: relative;
+  transition: color 0.1s linear;
 }
 
 section#experience {
@@ -168,7 +198,7 @@ p.skill-type {
 }
 
 p.summary {
-  padding: 0.25rem 0;
+  padding: 0.35rem 0;
 }
 
 .skill-container img {
