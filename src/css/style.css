@@ -41,7 +41,7 @@ body {
     min-width: 8rem;
   }
 
-  section#showcase .card-wrapper {
+  section#projects .card-wrapper {
     max-height: 400px;
   }
 }
@@ -84,13 +84,13 @@ section#showcase .card-wrapper {
   width: 100%;
   left: 0;
   top: 0;
-  animation-name: slide-in;
+  animation-name: fade-in;
   animation-duration: 0.75s;
   animation-timing-function: ease;
   overflow-y: auto;
 }
 
-@keyframes slide-in {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
