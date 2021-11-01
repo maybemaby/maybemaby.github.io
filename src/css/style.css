@@ -22,7 +22,7 @@ body {
     flex-direction: row;
     justify-content: start;
     align-items: stretch;
-    height: 90%;
+    height: 100vh;
     padding: 2vw 1.2vw;
     /* gap: 0; */
   }
@@ -42,7 +42,7 @@ body {
   }
 
   section#projects .card-wrapper {
-    max-height: 50vh;
+    max-height: 65vh;
   }
 }
 
@@ -74,7 +74,7 @@ div#nav-indicator {
   top: 0.2rem;
   background-color: rgb(253, 156, 10);
   height: 80%;
-  width: 33%;
+  width: 50%;
   border-radius: 15px;
   z-index: 1;
   transition: 0.3s ease;
@@ -160,7 +160,7 @@ section#showcase .card-wrapper {
   padding: 3rem 1.5rem 1rem 1.2rem;
 }
 
-h1.name {
+h1.about {
   margin: 0;
   font-weight: 900;
   font-size: 3rem;
@@ -232,13 +232,14 @@ nav.switch-button button {
 }
 
 section#experience {
-  display: block;
+  display: none;
   position: relative;
 }
 
 section#projects {
-  display: none;
+  display: block;
   position: relative;
+  line-height: 1.5;
 }
 
 section#skills {

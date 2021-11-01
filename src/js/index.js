@@ -9,14 +9,14 @@ const setActiveSection = (event) => {
   event.currentTarget.className += " active";
   changeVisibleSection(event.currentTarget.id);
   switch (event.currentTarget.id) {
-    case 'experience':
+    // case 'experience':
+    //   indicator.style.left = "0%"
+    //   break;
+    case 'projects':
       indicator.style.left = "0%"
       break;
-    case 'projects':
-      indicator.style.left = "32%"
-      break;
     case 'skills':
-      indicator.style.left = "64%"
+      indicator.style.left = "47%"
       break;
     default:
       return;
