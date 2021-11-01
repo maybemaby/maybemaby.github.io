@@ -1,5 +1,5 @@
 const sections = document.querySelectorAll(".switch-button button");
-const projectSection = document.querySelector("section#projects");
+const projectSection = document.querySelector("section#projects div");
 const indicator = document.querySelector('div#nav-indicator');
 
 const setActiveSection = (event) => {
@@ -61,6 +61,14 @@ const projects = [
   {
     title: "Personal Portfolio (this website)",
     summary: 'Showcase for my projects. Made with vanilla HTML, CSS, and Javascript',
+    preview: '',
+    repo: ''
+  },
+  {
+    title: "TweetSourcing",
+    summary: `Web app made for finding secondary sources of tweet information using keyword extraction.\
+    Created with Python, Flask, Bootstrap and tying together Twitter/Google api clients. 
+    `,
     preview: '',
     repo: ''
   }

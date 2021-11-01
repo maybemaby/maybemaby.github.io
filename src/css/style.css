@@ -26,13 +26,13 @@ body {
     padding: 2vw 1.2vw;
     /* gap: 0; */
   }
-  
+
   section#title-card {
     margin-bottom: 0;
   }
 
   section#projects {
-    overflow-y: auto;
+    /* overflow-y: visible; */
     padding-right: 0.5rem;
   }
 
@@ -41,11 +41,18 @@ body {
     min-width: 8rem;
   }
 
+  section#showcase .card-wrapper {
+    max-height: 400px;
+  }
 }
 
 @media (prefers-reduced-motion) {
   div#nav-indicator {
     transition: none;
+  }
+
+  section#showcase .card-wrapper {
+    animation: none;
   }
 }
 div#nav-indicator {
@@ -72,13 +79,31 @@ section#showcase {
   flex-direction: column;
 }
 
+section#showcase .card-wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation-name: slide-in;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  overflow-y: auto;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .card {
   background-color: white;
   border-radius: 1.25rem;
   box-shadow: 0 6px 9px 0 #00000059;
-  /* border: solid; */
-  /* border-width: 0 0.3rem 0.35rem 0; */
-  /* border-color: black; */
   min-height: 40px;
   transition: 0.5s;
 }
@@ -97,7 +122,7 @@ section#showcase {
 h1.name {
   margin: 0;
   font-weight: 900;
-  font-size: 3.0rem;
+  font-size: 3rem;
 }
 
 .card#title p {
@@ -117,7 +142,7 @@ h1.name {
   width: 100%;
 }
 
-.title-card-footer#links a{
+.title-card-footer#links a {
   padding: 0.5rem 2rem 0.5rem 0;
 }
 
@@ -126,10 +151,11 @@ h1.name {
   flex-direction: column;
   padding: 0.5rem 0.8rem;
   margin-bottom: 2rem;
+  margin-right: 0.5rem;
 }
 
 nav.switch-button {
-  border-radius: 4.0rem;
+  border-radius: 4rem;
   padding: 0.2rem 0.5rem;
   background-color: white;
   margin-bottom: 2rem;
@@ -145,7 +171,7 @@ nav.switch-button button.active {
   z-index: 100;
 }
 
-nav.switch-button button{
+nav.switch-button button {
   padding: 0.2rem;
   background-color: rgb(255, 255, 255, 0);
   border-radius: 15px;
@@ -160,14 +186,17 @@ nav.switch-button button{
 
 section#experience {
   display: block;
+  position: relative;
 }
 
 section#projects {
   display: none;
+  position: relative;
 }
 
 section#skills {
   display: none;
+  position: relative;
   text-align: center;
 }
 
