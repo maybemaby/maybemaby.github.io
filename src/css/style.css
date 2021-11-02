@@ -14,7 +14,6 @@ body {
   padding: 2vw 0vw;
   font-family: "PT Sans", sans-serif;
   font-weight: normal;
-  /* gap: 3rem 0; */
 }
 
 @media screen and (min-width: 768px) {
@@ -24,16 +23,28 @@ body {
     align-items: stretch;
     height: 100vh;
     padding: 2vw 1.2vw;
-    /* gap: 0; */
+    gap: 1.5rem;
   }
 
   section#title-card {
     margin-bottom: 0;
   }
 
+  section#showcase {
+    width: 100%;
+    padding: 2rem 0rem 2rem 2rem;
+  }
+
   section#projects {
-    /* overflow-y: visible; */
     padding-right: 0.5rem;
+  }
+
+  .card#small-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 2rem;
+    margin-right: 0.5rem;
   }
 
   nav.switch-button button {
@@ -114,8 +125,8 @@ p.highlight::after {
 }
 
 section#showcase {
-  width: 100%;
-  padding: 2rem;
+  width: 90%;
+  padding: 2rem 0rem;
   display: flex;
   flex-direction: column;
 }
@@ -198,7 +209,6 @@ h1.about {
   flex-direction: column;
   padding: 0.5rem 0.8rem;
   margin-bottom: 2rem;
-  margin-right: 0.5rem;
 }
 
 nav.switch-button {
