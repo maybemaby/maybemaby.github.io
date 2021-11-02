@@ -1,6 +1,6 @@
 const sections = document.querySelectorAll(".switch-button button");
 const projectSection = document.querySelector("section#projects div");
-const indicator = document.querySelector('div#nav-indicator');
+const indicator = document.querySelector("div#nav-indicator");
 
 const setActiveSection = (event) => {
   for (const section of sections) {
@@ -12,11 +12,11 @@ const setActiveSection = (event) => {
     // case 'experience':
     //   indicator.style.left = "0%"
     //   break;
-    case 'projects':
-      indicator.style.left = "0%"
+    case "projects":
+      indicator.style.left = "0%";
       break;
-    case 'skills':
-      indicator.style.left = "47%"
+    case "skills":
+      indicator.style.left = "47%";
       break;
     default:
       return;
@@ -48,7 +48,7 @@ const projects = [
     summary: `Personal dashboard with charts and tables made for a family member to track their investments from their financial advisor.\
     Uses a Django backend with PostgreSQL and Celery for task queue. React frontend with Material UI. Deployed with Docker on a Linux VPS.`,
     preview: "",
-    repo: 'https://github.com/maybemaby/maybemaby.github.io'
+    repo: "https://github.com/maybemaby/maybemaby.github.io",
   },
   {
     title: "CantDecide",
@@ -56,25 +56,33 @@ const projects = [
     Break choices down into factors weighted by the user and calculates each choice's score.\
     Styled with Tailwind, testing pipeline with Jest and Github Actions.`,
     preview: "",
-    repo: ''
+    repo: "",
   },
   {
     title: "Personal Portfolio (this website)",
-    summary: 'Showcase for my projects. Made with vanilla HTML, CSS, and Javascript',
-    preview: '',
-    repo: ''
+    summary:
+      "Showcase for my projects. Made with vanilla HTML, CSS, and Javascript",
+    preview: "",
+    repo: "https://github.com/maybemaby/maybemaby.github.io",
   },
   {
     title: "TweetSourcing",
     summary: `Web app made for finding secondary sources of tweet information using keyword extraction.\
     Created with Python, Flask, Bootstrap and tying together Twitter/Google api clients. 
     `,
-    preview: '',
-    repo: ''
-  }
+    preview: "",
+    repo: "https://github.com/maybemaby/tweetsourcing-flask",
+  },
 ];
 
 // Populates the project section with cards highlighting projects
+let linkButton = document.createElement("a");
+linkButton.classList += "button";
+linkButton.innerText = "View Source Code";
+let icon = document.createElement('img')
+icon.alt = 'code-icon'
+icon.src = 'static/code.svg'
+linkButton.appendChild(icon);
 for (const project of projects) {
   let card = document.createElement("div");
   card.classList.add("card");
@@ -86,5 +94,11 @@ for (const project of projects) {
   summary.classList.add("summary");
   summary.innerText = project.summary;
   card.appendChild(summary);
+  if (project.repo) {
+    let newLink = linkButton.cloneNode(true);
+    newLink.href = project.repo;
+
+    card.appendChild(newLink);
+  }
   projectSection.appendChild(card);
 }
