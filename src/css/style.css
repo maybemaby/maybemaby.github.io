@@ -64,6 +64,12 @@ body {
   }
 }
 
+@media screen and (min-width:2160px) {
+  body {
+    margin: 0 10%;
+  }
+}
+
 @media (prefers-reduced-motion) {
   div#nav-indicator {
     transition: none;
@@ -93,6 +99,7 @@ div#nav-indicator {
 
 section#title-card {
   width: 90%;
+  max-height: 900px;
 }
 
 p.highlight {
