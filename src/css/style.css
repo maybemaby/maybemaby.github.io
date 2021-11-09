@@ -259,6 +259,12 @@ section#projects {
   line-height: 1.5;
 }
 
+section#projects div.project-links{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
 a.button {
   padding: 0.25rem 0.5rem;
   margin: 0.25rem;
@@ -277,6 +283,16 @@ a.button {
 a.button:hover {
   background-color: rgb(0, 68, 255);
 }
+
+a.live {
+  background-color: #e07a5f;
+  color: white;
+}
+
+a.live:hover {
+  background-color: #dd613e;
+}
+
 
 section#skills {
   display: none;

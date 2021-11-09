@@ -48,7 +48,8 @@ const projects = [
     summary: `Personal dashboard with charts and tables made for a family member to track their investments from their financial advisor.\
     Uses a Django backend with PostgreSQL and Celery for task queue. React frontend with Material UI. Deployed with Docker on a Linux VPS.`,
     preview: "",
-    repo: "https://github.com/maybemaby/maybemaby.github.io",
+    repo: "",
+    live: ""
   },
   {
     title: "CantDecide",
@@ -57,6 +58,7 @@ const projects = [
     Styled with Tailwind, testing pipeline with Jest and Github Actions.`,
     preview: "",
     repo: "",
+    live: "https://cantdecideio.netlify.app/"
   },
   {
     title: "Personal Portfolio (this website)",
@@ -72,6 +74,7 @@ const projects = [
     `,
     preview: "",
     repo: "https://github.com/maybemaby/tweetsourcing-flask",
+    live: "https://tweetsourcing-flask.herokuapp.com/"
   },
 ];
 
@@ -83,6 +86,7 @@ let icon = document.createElement('img')
 icon.alt = 'code-icon'
 icon.src = 'static/code.svg'
 linkButton.appendChild(icon);
+linkButton.target = "_blank"
 for (const project of projects) {
   let card = document.createElement("div");
   card.classList.add("card");
@@ -94,11 +98,21 @@ for (const project of projects) {
   summary.classList.add("summary");
   summary.innerText = project.summary;
   card.appendChild(summary);
+  let links = document.createElement("div");
+  links.classList += "project-links";
+  card.appendChild(links);
   if (project.repo) {
     let newLink = linkButton.cloneNode(true);
     newLink.href = project.repo;
 
-    card.appendChild(newLink);
+    links.appendChild(newLink);
+  }
+  if (project.live) {
+    let liveLink = linkButton.cloneNode(true);
+    liveLink.href = project.live;
+    liveLink.innerText = "Live version"
+    liveLink.classList += " live"
+    links.appendChild(liveLink)
   }
   projectSection.appendChild(card);
 }
